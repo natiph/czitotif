@@ -1,0 +1,10 @@
+try:
+    from .czifile import czi2tif
+except ImportError:
+    try:
+        from czifile.czifile import czi2tif
+    except ImportError:
+        from czifile import czi2tif
+
+
+archivo1 = czi2tif('ubicacion')
